@@ -10,7 +10,17 @@ export const mutations = {
 
 export const actions = {
   async fetch({commit}) {
-    const users = await this.$axios.$get('https://jsonplaceholder.typicode.com/users')
+
+    let users;
+
+    await this.$axios.get('https://api.quwi.com/v2/projects', {
+      headers: {
+        Authorization: 'Bearer 2ec994fb9a453c489ba98d607c5f111a'
+      }
+    }).then((response) => {
+      users = response.data.projects
+    })
+
     commit('setUsers', users)
   }
 }
