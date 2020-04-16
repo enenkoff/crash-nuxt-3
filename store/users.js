@@ -15,9 +15,11 @@ export const actions = {
 
     let users;
 
+    console.log(token)
+
     await this.$axios.get('https://api.quwi.com/v2/projects', {
       headers: {
-        Authorization: 'Bearer ' + token
+        Authorization: 'Bearer 2ec994fb9a453c489ba98d607c5f111a'
       }
     }).then((response) => {
       users = response.data.projects
