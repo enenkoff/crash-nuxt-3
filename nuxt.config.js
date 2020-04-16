@@ -36,6 +36,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/validation.js',
+    '~plugins/vue-js-modal'
   ],
 
   /*
@@ -52,6 +54,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    transpile: ['vee-validate/dist/rules'],
     extend(config, ctx) {
 
     }
