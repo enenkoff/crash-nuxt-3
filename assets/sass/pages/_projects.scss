@@ -1,0 +1,102 @@
+.project {
+  &-listing {
+    padding: $gutter-x3 $gutter;
+  }
+  &-items {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &-item {
+    margin-bottom: 6px;
+    &--inner {
+      cursor: pointer;
+      border: 1px solid #CDCDCD;
+      background-color: #fff;
+      padding: $gutter;
+      display: flex;
+      align-items: center;
+      font-size: $font;
+      @include mq($until: mobile){
+        flex-wrap: wrap;
+      }
+    }
+    &--img {
+      flex-shrink: 0;
+      width: 60px;
+      margin-right: 14px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &--title {
+      font-weight: 600;
+      margin-right: $gutter;
+      @include mq($until: tablet){
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    &--status {
+      flex-grow: 1;
+      text-align: center;
+      font-weight: 600;
+      color: $text-02;
+      .active {
+        color: $ui-02;
+      }
+      @include mq($until: tablet){
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    &--time {
+      margin-left: $gutter;
+      @include mq($until: tablet){
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      dl {
+        display: table;
+        div {
+          display: table-row;
+          padding: 0 2px;
+        }
+        dt {
+          font-size: 13px;
+        }
+        dd {
+          font-weight: 600;
+          padding-left: 24px;
+        }
+        dt, dd {
+          padding-top: 1px;
+          padding-bottom: 1px;
+          display: table-cell;
+        }
+      }
+    }
+  }
+  &-edit {
+    &--form {
+      @include mq($from: tablet){
+        padding: $gutter-x2 $gutter-x3;
+      }
+      @include mq($until: tablet){
+        padding: 20px;
+      }
+    }
+    &--title {
+      text-transform: uppercase;
+      font-size: $font-xl;
+      margin-bottom: 24px;
+    }
+    &--field {
+      margin-bottom: 20px;
+    }
+    &--cta {
+      margin-top: 24px;
+    }
+  }
+}

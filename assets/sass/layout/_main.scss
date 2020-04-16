@@ -1,0 +1,54 @@
+html {
+  min-height: 100%;
+  font-size: $font;
+  &.ovh {
+    //overflow: hidden;
+    width: 100%;
+    position: fixed;
+    overflow-y: scroll;
+  }
+
+}
+body {
+  line-height: 1.4;
+  font-weight: 400;
+  color: $black;
+  font-size: $font;
+  font-family: $mainFont;
+}
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+a {
+  outline: none;
+  transition: all 0.3s;
+}
+svg {
+  @extend %full_block;
+  fill: currentColor;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  flex: 1 0 auto;
+  background-color: $bg-04;
+  overflow: hidden;
+  padding-top: $headerHeight;
+}
+

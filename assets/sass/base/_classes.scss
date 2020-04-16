@@ -1,0 +1,59 @@
+/** Classes */
+
+.content {
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0 $gutter-x2;
+}
+
+.flex {
+  &-box {
+    display: flex;
+  }
+  &-align_items {
+    &--center {
+      align-items: center;
+    }
+  }
+  &-justify {
+    &--right {
+      justify-content: flex-end;
+    }
+    &--center {
+      justify-content: center;
+    }
+    &--space {
+      justify-content: space-between;
+    }
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.position {
+  &-relative {
+    position: relative;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.mobile-visible {
+  @include mq($from: mobile) {
+    display: none !important;
+  }
+}
+.mobile-hidden {
+  @include mq($until: mobile) {
+    display: none !important;
+  }
+}

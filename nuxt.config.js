@@ -28,7 +28,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/node_modules/bootstrap/dist/css/bootstrap.min.css'
+    '@/node_modules/bootstrap/dist/css/bootstrap.min.css',
+    '~assets/sass/styles.scss'
   ],
 
   /*

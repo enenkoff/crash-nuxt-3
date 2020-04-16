@@ -1,0 +1,12 @@
+.footer {
+  background: $bg-01;
+  width: 100%;
+  &-inner {
+    padding: $gutter 0;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    color: $text-02;
+    font-size: $font-sm;
+  }
+}

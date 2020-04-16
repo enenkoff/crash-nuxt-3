@@ -1,0 +1,10 @@
+@import "form/input";
+
+.form-field {
+  .is-invalid {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: #eb0600;
+  }
+}

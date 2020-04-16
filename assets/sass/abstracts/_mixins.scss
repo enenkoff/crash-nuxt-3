@@ -1,0 +1,10 @@
+@import "mixins/mq";
+
+@mixin hover(){
+  @include mq($from: desktop) {
+    &:hover {
+      @content;
+    }
+  }
+}
+

@@ -1,0 +1,58 @@
+$headerHeight: 46px;
+
+.header {
+  background: $bg-02;
+  border: none;
+  box-shadow: 0 0 5px rgba($black,.25);
+  text-align: right;
+  padding-right: $gutter;
+  height: $headerHeight;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  &-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: $black;
+    font-weight: 700;
+    font-family: sans-serif;
+    width: 44px;
+    height: 44px;
+    margin-left: 10px;
+    margin-right: $gutter;
+    margin-top: 1px;
+    border-radius: 50%;
+  }
+  &-nav {
+    line-height: $headerHeight;
+    height: $headerHeight;
+    display: inline-flex;
+    justify-content: flex-end;
+    flex: 1;
+    a {
+      display: flex;
+      float: left;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: .8em;
+      color: $text-03;
+      padding: 0 $gutter;
+      height: $headerHeight;
+      white-space: nowrap;
+      cursor: pointer;
+      @include hover(){
+        color: $ui-01;
+        background: $bg-03;
+        text-decoration: none;
+      }
+      &.active {
+        color: $ui-01;
+        background: $bg-03;
+        text-decoration: none;
+      }
+    }
+  }
+}

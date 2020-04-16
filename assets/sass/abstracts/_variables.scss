@@ -1,0 +1,12 @@
+$gutter: 18px;              // 18px
+$gutter-x2: 2*$gutter;      // 36px
+$gutter-x3: 3*$gutter;      // 54px
+
+$font:    14px;             // 14px
+
+$font-xs: $font - 4px;      // 10px
+$font-sm: $font - 2px;      // 12px
+$font-md: $font + 2px;      // 16px
+$font-lg: $font + 4px;      // 18px
+$font-xl: $font + 6px;      // 20px
+

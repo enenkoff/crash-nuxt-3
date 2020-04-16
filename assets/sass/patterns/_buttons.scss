@@ -1,0 +1,50 @@
+/**
+Buttons
+ */
+
+.btn {
+  @extend %btn_reset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 6px;
+  outline: none;
+  &-color {
+    &--white {
+      color: #26517B;
+      border: 1px solid #26517B;
+      background-color: $white;
+      @include hover(){
+        color: darken(#26517B, 8);
+        border-color: darken(#26517B, 8);
+      }
+    }
+    &--blue {
+      color: $white;
+      background-color: #26517B;
+      @include hover(){
+        background-color: darken(#26517B, 8);
+      }
+    }
+
+  }
+  &-size {
+    &--md {
+      font-size: 15px;
+      height: 44px;
+      padding: 0 24px;
+      min-width: 125px;
+    }
+
+  }
+  &--full {
+    width: 100%;
+  }
+
+}
+

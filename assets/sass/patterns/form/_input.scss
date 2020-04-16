@@ -1,0 +1,17 @@
+.form-input {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #CDCDCD;
+  border-radius: 2px;
+  font-size: 16px;
+  height: 42px;
+  padding: 0 10px;
+  &.invalid {
+    border-color: #eb0600;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 3px 0 rgba(235,6,0,0.5);
+    }
+  }
+}

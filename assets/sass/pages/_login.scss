@@ -1,0 +1,26 @@
+.login {
+  padding: $gutter-x3 0;
+  &-form {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 520px;
+    @include mq($from: tablet){
+      box-shadow: 0 0 9px 0 rgba(0,0,0,.19);
+      padding: $gutter-x2 $gutter-x3;
+    }
+    @include mq($until: tablet){
+      padding: $gutter;
+    }
+    &--title {
+      text-transform: uppercase;
+      font-size: $font-xl;
+      margin-bottom: 18px;
+    }
+    &--field {
+      margin-bottom: 14px;
+    }
+    &--cta {
+      margin-top: 24px;
+    }
+  }
+}
