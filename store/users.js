@@ -16,7 +16,7 @@ export const actions = {
   async fetch({commit}) {
 
 
-    const token = await this.$cookies.get('quwi_user_token')
+    const token = this.$cookies.get('quwi_user_token')
 
     commit('setToken', token)
 
