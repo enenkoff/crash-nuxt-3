@@ -32,11 +32,21 @@ export default {
           }
       }).then((response) => {
           users = response.data.projects
+      }).catch((error) => {
+          this.$modal.show('dialog', {
+              text: error,
+              buttons: [
+                  {
+                      title: 'Close'
+                  }
+              ]
+          })
       })
 
       return { users }
   },
   data: () => ({
+      users: [],
     pageTitle: 'Users page'
   }),
   computed: {
