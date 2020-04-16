@@ -1,21 +1,26 @@
 export const state = () => ({
-  users: []
+  users: [],
+  token: ''
 })
 
 export const mutations = {
   setUsers(state, users) {
     state.users = users
+  },
+  setToken(state, token) {
+    state.token = token
   }
 }
 
 export const actions = {
-  async fetch({commit}, token) {
+  async fetch({commit}) {
 
 
+    const token = await this.$cookies.get('quwi_user_token')
+
+    commit('setToken', token)
 
     let users;
-
-    console.log(token)
 
     await this.$axios.get('https://api.quwi.com/v2/projects', {
       headers: {
@@ -30,5 +35,6 @@ export const actions = {
 }
 
 export const getters = {
-  users: s => s.users
+  users: s => s.users,
+  token: s => s.token
 }
