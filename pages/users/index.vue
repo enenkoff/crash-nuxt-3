@@ -12,7 +12,11 @@
 
 <script>
 export default {
-  async fetch({store}) {
+  async fetch({store, app}) {
+
+      const token = await app.$cookies.get('quwi_user_token')
+      console.log(token)
+
     if (store.getters['users/users'].length === 0) {
       await store.dispatch('users/fetch')
     }

@@ -11,13 +11,13 @@ export const mutations = {
 export const actions = {
   async fetch({commit}) {
 
-    const token = await this.$cookies.get('quwi_user_token')
+    
 
     let users;
 
     await this.$axios.get('https://api.quwi.com/v2/projects', {
       headers: {
-        Authorization: 'Bearer ' + token
+        Authorization: 'Bearer 2ec994fb9a453c489ba98d607c5f111a'
       }
     }).then((response) => {
       users = response.data.projects
