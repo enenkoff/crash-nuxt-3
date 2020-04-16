@@ -21,12 +21,12 @@ export default {
   //     await store.dispatch('users/fetch')
   //   }
   // },
-    async asyncData ({ app }) {
+    async asyncData ({ $axios, app }) {
 
       const token = await app.$cookies.get('quwi_user_token')
 
       let users;
-      await app.$axios.get('https://api.quwi.com/v2/projects', {
+      await $axios.get('https://api.quwi.com/v2/projects', {
           headers: {
               Authorization: 'Bearer ' + token
           }
